@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DOM change</title>
+  <meta charset="utf-8" />
+  <script type="text/javascript" src="../../web/jquery-3.2.1.js"></script>
+  <script>
+    function writeIt(){
+    $("#heading").css('font-weight', 'bold').html("JQuery");
+    var q = document.getElementById('question');
+    q.innerHTML = "I prefer JQuery";
+    }
+  </script>
+</head>
+<body onload="writeIt()">
+  <p id="heading">JQuery or javascript</p>
+  <p id="question">Which method to you prefer?</p>
+</body>
+</html>

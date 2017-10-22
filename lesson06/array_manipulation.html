@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Manipulation</title>
+  <meta charset="utf-8" />
+  <script>
+  function writeIt(){
+    var weekDays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"];
+    writeArray("Week Days", weekDays);
+    var weekEnd = new Array();
+    weekEnd.push("Saturday");
+    weekEnd.push("Sunday");
+    writeArray("weekEnd", weekEnd);
+
+    var week = weekDays.concat([]);
+    week.unshift(weekEnd[1]);
+    week.push(weekEnd[0]);
+    writeArray("week", week);
+
+    <!--create a midweek array-->
+    var midweek = week.slice(2, 5);
+    writeArray("Mid Week", midweek);
+
+    <!-- Short version of midweek -->
+    var sorteWeek = week.sort();
+    document.write("<b>Sorted Days :</b> <br>");
+    for(dayIndex in sorteWeek){
+      document.write(sorteWeek[dayIndex] + "<br>")
+    }
+
+  }
+
+  function writeArray(msg, arr){
+    var arrString = arr.join(" | ");
+    document.write("<b>" + msg + ": </b>" + arrString + "<br><br>");
+  }
+
+  </script>
+
+</head>
+<body onload="writeIt()">
+</body>
+
+</html>
