@@ -4,8 +4,20 @@
   <title> Web Element Manipulation</title>
   <meta charset="utf-8" />
   <script type="text/javascript" src="../JQuery/jquery-3.2.1.js"></script>
-
 </head>
 <body>
+  <div id="container">
+    <div id="menu" class="menu">
+      <span id="lesson" class="menuItem">lessons</span>
+      <span id="docs" class="menuItem">Docs</span>
+      <span id="fade" class="menuItem">Fade</span>
+    </div>
+    <div id="content"></div>
+  </div>
+  <div id="docMenu">
+    <span onclick="setDoc('http://api.jquery.com')">JQuery</span>
+    <span onclick="setDoc('http://api.jqueryi.com')">JQueryUI</span>
+    <span onclick="setDoc('http://jquerymobile.com/demos/1.4.0/')">JQueryMobile</span>
+  </div>
 </body>
 </html>
